@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memoona Amir — Content Writer & Copywriter</title>
+<meta name="description" content="Memoona Amir — content writer and copywriter turning ideas into words that sell. Skincare, travel, furniture and B2C copy that stops the scroll and drives action.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --alabaster:#F9F9F8;
+    --onyx:#111111;
+    --champagne:#D4AF37;
+    --ember:#C1622D;
+    --charcoal:#4A4A4A;
+    --hairline: rgba(17,17,17,0.12);
+    --cream-panel:#F1ECE2;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--alabaster);
+    color:var(--onyx);
+    font-family:'Inter', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important; scroll-behavior:auto !important;}
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    margin:0;
+    color:var(--onyx);
+  }
+
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+
+  :focus-visible{ outline:2px solid var(--ember); outline-offset:3px; }
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 clamp(24px, 5vw, 64px);
+  }
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky; top:0; z-index:40;
+    background:rgba(249,249,248,0.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--hairline);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px clamp(24px,5vw,64px);
+    max-width:1180px; margin:0 auto;
+  }
+  .nav-mark{
+    font-family:'Fraunces', serif;
+    font-size:1.05rem;
+    letter-spacing:0.01em;
+  }
+  .nav-links{
+    display:flex; align-items:center; gap:28px; list-style:none; margin:0; padding:0;
+    font-size:0.88rem; color:var(--charcoal);
+  }
+  .nav-links a{ text-decoration:none; position:relative; }
+  .nav-links a:hover{ color:var(--onyx); }
+  .nav-links a::after{
+    content:''; position:absolute; left:0; right:0; bottom:-4px; height:1px;
+    background:var(--ember); transform:scaleX(0); transform-origin:left;
+    transition:transform .25s ease;
+  }
+  .nav-links a:hover::after{ transform:scaleX(1); }
+  .nav-cta{
+    background:var(--onyx); color:var(--alabaster) !important;
+    padding:9px 18px; border-radius:2px; font-size:0.85rem;
+    text-decoration:none !important; white-space:nowrap;
+  }
+  .nav-cta:hover{ background:var(--ember); }
+  @media (max-width:820px){ .nav-links li:not(.nav-cta-item){display:none;} }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:min(11vh,100px) 0 90px;
+    border-bottom:1px solid var(--hairline);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:56px;
+    align-items:center;
+  }
+  .hero-kicker{
+    color:var(--ember);
+    font-size:0.95rem;
+    margin-bottom:22px;
+    font-weight:600;
+  }
+  .hero h1{
+    font-size:clamp(2.5rem, 5.4vw, 4.2rem);
+    line-height:1.05;
+    letter-spacing:-0.01em;
+  }
+  .hero-sub{
+    margin-top:24px;
+    font-size:1.12rem;
+    color:var(--charcoal);
+    max-width:46ch;
+  }
+  .hero-actions{
+    margin-top:36px;
+    display:flex; flex-wrap:wrap; gap:16px; align-items:center;
+  }
+  .btn-primary{
+    display:inline-block;
+    background:var(--onyx); color:var(--alabaster);
+    padding:15px 30px;
+    text-decoration:none;
+    font-size:0.95rem; font-weight:600;
+    border-radius:2px;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .btn-primary:hover{ background:var(--ember); transform:translateY(-1px); }
+  .btn-ghost{
+    text-decoration:none; color:var(--onyx);
+    font-size:0.95rem; border-bottom:1px solid var(--champagne); padding-bottom:3px;
+  }
+  .hero-stats{
+    display:flex; flex-wrap:wrap; gap:44px;
+    margin-top:60px;
+    padding-top:30px;
+    border-top:1px solid var(--hairline);
+  }
+  .stat-num{
+    font-family:'Fraunces', serif;
+    font-size:2rem;
+    color:var(--onyx);
+  }
+  .stat-num em{ font-style:normal; color:var(--ember); }
+  .stat-label{ color:var(--charcoal); font-size:0.88rem; margin-top:4px; }
+
+  .hero-photo{
+    position:relative;
+  }
+  .hero-photo img{
+    width:100%;
+    border-radius:4px;
+  }
+  .hero-photo::after{
+    content:'';
+    position:absolute; inset:-14px -14px auto auto; width:70%; height:70%;
+    border:1px solid var(--ember); z-index:-1; border-radius:4px;
+  }
+  @media (max-width:900px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-photo{ max-width:340px; order:-1; }
+    .hero-photo::after{ display:none; }
+  }
+
+  /* ---------- GENERIC SECTION ---------- */
+  section{ padding:96px 0; border-bottom:1px solid var(--hairline); }
+  section:last-of-type{ border-bottom:none; }
+
+  .section-head{
+    display:grid;
+    grid-template-columns: 220px 1fr;
+    gap:32px;
+    margin-bottom:56px;
+  }
+  .section-head .tag{
+    color:var(--ember);
+    font-size:0.9rem;
+    padding-top:6px;
+    font-weight:600;
+  }
+  .section-head h2{
+    font-size:clamp(1.8rem, 3.4vw, 2.6rem);
+    max-width:18ch;
+    line-height:1.15;
+  }
+  @media (max-width:760px){
+    .section-head{ grid-template-columns:1fr; gap:10px; }
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-body{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:32px;
+  }
+  .about-body p{
+    max-width:62ch;
+    font-size:1.08rem;
+    margin:0 0 22px;
+  }
+  .about-body p:first-of-type::first-letter{
+    font-family:'Fraunces', serif;
+    font-size:3.4rem;
+    line-height:0.8;
+    float:left;
+    margin:6px 10px 0 0;
+    color:var(--ember);
+  }
+  .flow{
+    margin-top:36px;
+    display:flex; flex-wrap:wrap; align-items:center; gap:10px;
+    font-size:0.95rem; color:var(--charcoal);
+  }
+  .flow span.node{ color:var(--onyx); }
+  .flow .sep{ color:var(--ember); }
+  @media (max-width:760px){ .about-body{ grid-template-columns:1fr; } }
+
+  /* ---------- FRAMEWORK ---------- */
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    border-top:1px solid var(--hairline);
+    border-left:1px solid var(--hairline);
+  }
+  .step{
+    border-right:1px solid var(--hairline);
+    border-bottom:1px solid var(--hairline);
+    padding:30px 26px;
+    min-height:190px;
+    display:flex; flex-direction:column; justify-content:space-between;
+    transition:background .2s ease;
+  }
+  .step:hover{ background:var(--cream-panel); }
+  .step-num{ font-family:'Fraunces', serif; color:var(--ember); font-size:1.1rem; }
+  .step h4{ font-size:1.15rem; margin-top:18px; }
+  .step p{ color:var(--charcoal); font-size:0.92rem; margin:8px 0 0; }
+  @media (max-width:900px){ .steps{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px){ .steps{ grid-template-columns:1fr; } }
+
+  /* ---------- FRAMEWORK LIBRARY ---------- */
+  .fw-list{ display:flex; flex-direction:column; }
+  .fw-row{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:32px;
+    padding:28px 0;
+    border-top:1px solid var(--hairline);
+  }
+  .fw-list .fw-row:last-child{ border-bottom:1px solid var(--hairline); }
+  .fw-name{ font-family:'Fraunces', serif; font-size:1.3rem; }
+  .fw-chain{ color:var(--charcoal); font-size:0.92rem; margin-top:6px; }
+  .fw-desc{ max-width:56ch; color:var(--onyx); }
+  .fw-example{
+    margin-top:14px;
+    padding:14px 18px;
+    border-left:2px solid var(--ember);
+    color:var(--charcoal);
+    font-size:0.95rem;
+  }
+  .fw-example strong{ color:var(--onyx); font-weight:600; }
+  @media (max-width:760px){ .fw-row{ grid-template-columns:1fr; } }
+
+  /* ---------- VOICES ---------- */
+  .voices{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1px;
+    background:var(--hairline);
+    border:1px solid var(--hairline);
+  }
+  .voice{
+    background:var(--alabaster);
+    padding:34px 30px;
+    transition:background .2s ease;
+  }
+  .voice:hover{ background:var(--cream-panel); }
+  .voice-label{ color:var(--ember); font-size:0.88rem; margin-bottom:14px; font-weight:600; }
+  .voice-line{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:1.3rem;
+    line-height:1.4;
+  }
+  .voice-note{ margin-top:14px; color:var(--charcoal); font-size:0.92rem; }
+  @media (max-width:760px){ .voices{ grid-template-columns:1fr; } }
+
+  /* ---------- MID-PAGE CTA (scroll-stopper) ---------- */
+  .stopper{
+    background:var(--onyx);
+    color:var(--alabaster);
+    padding:100px 0;
+    border-bottom:1px solid var(--hairline);
+    text-align:center;
+  }
+  .stopper .wrap{ display:flex; flex-direction:column; align-items:center; }
+  .stopper-eyebrow{ color:var(--champagne); font-size:0.95rem; margin-bottom:22px; font-weight:600; }
+  .stopper h2{
+    color:var(--alabaster);
+    font-size:clamp(1.9rem, 4.6vw, 3.2rem);
+    max-width:20ch;
+    line-height:1.2;
+  }
+  .stopper p{
+    color:#C9C9C6;
+    max-width:52ch;
+    margin:26px auto 0;
+    font-size:1.08rem;
+  }
+  .stopper .btn-primary{
+    margin-top:38px;
+    background:var(--ember);
+  }
+  .stopper .btn-primary:hover{ background:var(--champagne); color:var(--onyx); }
+
+  /* ---------- CASE STUDIES ---------- */
+  .case{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:32px;
+    padding:56px 0;
+    border-top:1px solid var(--hairline);
+  }
+  .case:last-child{ border-bottom:1px solid var(--hairline); }
+  .case-meta{ color:var(--charcoal); font-size:0.9rem; }
+  .case-meta .industry{ color:var(--onyx); font-family:'Fraunces', serif; font-size:1.2rem; display:block; margin-bottom:10px; }
+  .case-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:28px 40px;
+  }
+  .case-field h5{
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:0.82rem;
+    color:var(--charcoal);
+    margin:0 0 8px;
+  }
+  .case-field p{ margin:0; }
+  .case-field.full{ grid-column:1 / -1; }
+  .hook-block{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:1.35rem;
+    line-height:1.45;
+    border-left:2px solid var(--ember);
+    padding-left:20px;
+    margin:0;
+  }
+  .copy-sample{
+    background:var(--cream-panel);
+    border:1px solid var(--hairline);
+    padding:20px 22px;
+    font-size:0.98rem;
+  }
+  .cta-chip{
+    display:inline-block;
+    font-size:0.85rem;
+    color:var(--onyx);
+    border-bottom:1px solid var(--champagne);
+    padding-bottom:2px;
+  }
+  @media (max-width:760px){
+    .case{ grid-template-columns:1fr; }
+    .case-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- PERFORMANCE ---------- */
+  .perf{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:56px;
+    align-items:start;
+  }
+  .perf-num{
+    font-family:'Fraunces', serif;
+    font-size:clamp(3.5rem, 9vw, 6.5rem);
+    line-height:1;
+    color:var(--onyx);
+  }
+  .perf-num em{ font-style:normal; color:var(--ember); }
+  .perf-caption{ color:var(--charcoal); margin-top:16px; max-width:38ch; }
+  .learned{ list-style:none; margin:0; padding:0; }
+  .learned li{
+    padding:16px 0;
+    border-top:1px solid var(--hairline);
+    display:flex; gap:16px;
+  }
+  .learned li:last-child{ border-bottom:1px solid var(--hairline); }
+  .learned .mark{ color:var(--ember); font-family:'Fraunces', serif; }
+  .disclaimer{
+    margin-top:28px;
+    font-size:0.85rem;
+    color:var(--charcoal);
+    max-width:44ch;
+  }
+  @media (max-width:820px){ .perf{ grid-template-columns:1fr; } }
+
+  /* ---------- BEFORE / AFTER ---------- */
+  .ba{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--hairline);
+    border:1px solid var(--hairline);
+  }
+  .ba > div{ background:var(--alabaster); padding:36px 32px; }
+  .ba-label{ font-size:0.85rem; color:var(--charcoal); margin-bottom:16px; }
+  .ba-line{ font-family:'Fraunces', serif; font-size:1.4rem; line-height:1.35; }
+  .ba .after .ba-line{ color:var(--onyx); }
+  .ba .after{ position:relative; }
+  .ba .after::before{
+    content:''; position:absolute; left:0; top:0; bottom:0; width:2px; background:var(--ember);
+  }
+  .why-list{ margin-top:40px; display:flex; flex-wrap:wrap; gap:14px 34px; color:var(--charcoal); font-size:0.95rem; }
+  .why-list span::before{ content:'— '; color:var(--ember); }
+  @media (max-width:760px){ .ba{ grid-template-columns:1fr; } }
+
+  /* ---------- CHECKLIST ---------- */
+  .checklist{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:0 40px;
+  }
+  .check-item{
+    display:flex; align-items:baseline; gap:14px;
+    padding:14px 0;
+    border-top:1px solid var(--hairline);
+  }
+  .check-item .box{
+    width:14px; height:14px;
+    border:1px solid var(--charcoal);
+    flex:none;
+    transform:translateY(2px);
+  }
+  @media (max-width:760px){ .checklist{ grid-template-columns:1fr; } }
+
+  /* ---------- TOOLKIT ---------- */
+  .toolkit{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--hairline);
+    border:1px solid var(--hairline);
+  }
+  .tool-card{ background:var(--alabaster); padding:26px 24px; }
+  .tool-card h5{ font-size:0.82rem; font-weight:700; color:var(--charcoal); margin:0 0 12px; }
+  .tool-card ul{ list-style:none; margin:0; padding:0; font-size:0.92rem; display:flex; flex-direction:column; gap:7px; }
+  @media (max-width:820px){ .toolkit{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px){ .toolkit{ grid-template-columns:1fr; } }
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    padding:110px 0 80px;
+    text-align:left;
+  }
+  .contact-kicker{ color:var(--ember); font-size:0.95rem; font-weight:600; margin-bottom:20px; }
+  .contact h2{
+    font-size:clamp(2rem, 5vw, 3.4rem);
+    max-width:18ch;
+    line-height:1.15;
+  }
+  .contact-row{
+    margin-top:48px;
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:32px;
+    padding-top:28px;
+    border-top:1px solid var(--hairline);
+  }
+  .contact-services{ color:var(--charcoal); max-width:32ch; }
+  .contact-links{ display:flex; flex-direction:column; gap:14px; font-size:1.05rem; }
+  .contact-links a{ text-decoration:none; }
+  .contact-links a span.label{ color:var(--charcoal); font-size:0.8rem; display:block; margin-bottom:2px; }
+  .contact-links a .value{ border-bottom:1px solid var(--champagne); padding-bottom:2px; }
+  .contact-links a:hover .value{ color:var(--ember); }
+  .contact-cta{ margin-top:44px; }
+
+  footer{
+    padding:26px 0 40px;
+    color:var(--charcoal);
+    font-size:0.82rem;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+
+  ::selection{ background:var(--champagne); color:var(--onyx); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-mark">Memoona Amir</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#framework">Process</a></li>
+      <li><a href="#case-studies">Case studies</a></li>
+      <li><a href="#performance">Results</a></li>
+      <li class="nav-cta-item"><a class="nav-cta" href="#contact">Hire me</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-kicker">Content Writer &amp; Copywriter</div>
+      <h1>Words that stop the scroll. Copy that closes the sale.</h1>
+      <p class="hero-sub">I'm Memoona Amir — an applied-psychology-trained copywriter who turns "just another product" into something people actually stop for, read, and buy. If your words aren't converting, they're not doing their job. Mine do.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contact">Let's write something that sells</a>
+        <a class="btn-ghost" href="#case-studies">See the proof</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num"><em>1M+</em></div>
+          <div class="stat-label">Views across projects</div>
+        </div>
+        <div>
+          <div class="stat-num">4</div>
+          <div class="stat-label">Industries — skincare, travel, furniture, B2C</div>
+        </div>
+        <div>
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Live campaigns &amp; product lines written</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/memoona-portrait.png" alt="Memoona Amir, content writer and copywriter">
+    </div>
+  </div>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="wrap">
+  <div class="section-head">
+    <div class="tag">About</div>
+    <h2>I don't just write content. I build the message behind it.</h2>
+  </div>
+  <div class="about-body">
+    <div></div>
+    <div>
+      <p>Most of my work has happened inside real client projects at ABCDMEDIA, writing for B2C brands that had very little in common with each other — a skincare line explaining an ingredient, a travel business selling a country most people had never considered visiting, a furniture brand trying to sound like more than a product catalogue. Moving between them taught me that the writing itself is the last step, not the first.</p>
+      <p>What comes before it is understanding who is reading, what they already believe, and what would actually make them stop scrolling. I write differently for a 22-year-old comparing sunscreens than I do for someone pricing a sofa, and that difference is the point. Every word is chosen to move someone from "scrolling past" to "reading" to "acting."</p>
+      <div class="flow">
+        <span class="node">Research</span><span class="sep">→</span>
+        <span class="node">Audience understanding</span><span class="sep">→</span>
+        <span class="node">Strategy</span><span class="sep">→</span>
+        <span class="node">Structure</span><span class="sep">→</span>
+        <span class="node">Copy</span><span class="sep">→</span>
+        <span class="node">CTA</span><span class="sep">→</span>
+        <span class="node">Performance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FRAMEWORK (process) ================= -->
+<section id="framework" class="wrap">
+  <div class="section-head">
+    <div class="tag">Process</div>
+    <h2>How I build content that converts</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">01</span>
+      <div><h4>Understand</h4><p>Audience, product, problem, desire and buying motivation.</p></div>
+    </div>
+    <div class="step">
+      <span class="step-num">02</span>
+      <div><h4>Research</h4><p>Market, competitors, audience language, trends and objections.</p></div>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <div><h4>Position</h4><p>What the brand or product should communicate, and why it matters.</p></div>
+    </div>
+    <div class="step">
+      <span class="step-num">04</span>
+      <div><h4>Hook</h4><p>An opening that earns attention before anything is explained.</p></div>
+    </div>
+    <div class="step">
+      <span class="step-num">05</span>
+      <div><h4>Structure</h4><p>Organise information for readability, curiosity and retention.</p></div>
+    </div>
+    <div class="step">
+      <span class="step-num">06</span>
+      <div><h4>Persuade</h4><p>Turn features into benefits, and benefits into reasons to act.</p></div>
+    </div>
+    <div class="step">
+      <span class="step-num">07</span>
+      <div><h4>CTA</h4><p>A clear, specific next step — never a vague "learn more."</p></div>
+    </div>
+    <div class="step">
+      <span class="step-num">08</span>
+      <div><h4>Refine</h4><p>Edit for clarity, tone, rhythm, platform and audience.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FRAMEWORK LIBRARY ================= -->
+<section class="wrap">
+  <div class="section-head">
+    <div class="tag">Structures I reach for</div>
+    <h2>The frameworks behind the copy</h2>
+  </div>
+  <div class="fw-list">
+    <div class="fw-row">
+      <div>
+        <div class="fw-name">AIDA</div>
+        <div class="fw-chain">Attention → Interest → Desire → Action</div>
+      </div>
+      <div>
+        <p class="fw-desc">My default for promotional and product-launch content, where the reader needs to be pulled from a scroll into a decision within a few lines.</p>
+      </div>
+    </div>
+    <div class="fw-row">
+      <div>
+        <div class="fw-name">PAS</div>
+        <div class="fw-chain">Problem → Agitate → Solution</div>
+      </div>
+      <div>
+        <p class="fw-desc">Used for pain-point-driven categories like skincare, where the reader already feels the problem and needs the discomfort named before the fix.</p>
+      </div>
+    </div>
+    <div class="fw-row">
+      <div>
+        <div class="fw-name">BAB</div>
+        <div class="fw-chain">Before → After → Bridge</div>
+      </div>
+      <div>
+        <p class="fw-desc">Built for transformation stories — a routine, a trip, a room — where showing the shift matters more than listing features.</p>
+      </div>
+    </div>
+    <div class="fw-row">
+      <div>
+        <div class="fw-name">4Ps</div>
+        <div class="fw-chain">Promise → Picture → Proof → Push</div>
+      </div>
+      <div>
+        <p class="fw-desc">Used to strengthen longer promotional copy that needs to earn belief, not just attention, before asking for action.</p>
+      </div>
+    </div>
+    <div class="fw-row">
+      <div>
+        <div class="fw-name">Storytelling structure</div>
+        <div class="fw-chain">Hook → Context → Conflict → Insight → Resolution → CTA</div>
+      </div>
+      <div>
+        <p class="fw-desc">My structure for travel and lifestyle content, where the destination or product needs to feel like part of a story, not a listing.</p>
+      </div>
+    </div>
+    <div class="fw-row">
+      <div>
+        <div class="fw-name">Feature → Benefit → Outcome</div>
+        <div class="fw-chain">What it is → what it does → what changes</div>
+      </div>
+      <div>
+        <p class="fw-desc">The base translation layer under almost everything else I write.</p>
+        <div class="fw-example"><strong>Contains Hyaluronic Acid</strong> becomes <strong>helps draw moisture into the skin, leaving it feeling hydrated and plump.</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WRITING STYLES ================= -->
+<section class="wrap">
+  <div class="section-head">
+    <div class="tag">Range</div>
+    <h2>One writer. Different voices.</h2>
+  </div>
+  <div class="voices">
+    <div class="voice">
+      <div class="voice-label">Conversational</div>
+      <div class="voice-line">"The pimple left. The mark didn't."</div>
+      <div class="voice-note">Short, spoken, and built to sound like something a friend would actually say.</div>
+    </div>
+    <div class="voice">
+      <div class="voice-label">Educational</div>
+      <div class="voice-line">What niacinamide is actually doing to your skin barrier</div>
+      <div class="voice-note">Explains ingredients and mechanisms in plain language, without flattening the science.</div>
+    </div>
+    <div class="voice">
+      <div class="voice-label">Persuasive</div>
+      <div class="voice-line">"You've tried the routine. Have you tried the right one?"</div>
+      <div class="voice-note">Leads with the reader's problem, not the product's ingredient list.</div>
+    </div>
+    <div class="voice">
+      <div class="voice-label">Storytelling</div>
+      <div class="voice-line">"It wasn't on anyone's list. That's exactly why we went."</div>
+      <div class="voice-note">Builds curiosity before revealing the destination or product.</div>
+    </div>
+    <div class="voice">
+      <div class="voice-label">Promotional</div>
+      <div class="voice-line">Three days left, and the price won't hold.</div>
+      <div class="voice-note">Communicates urgency without leaning on exclamation points to do the work.</div>
+    </div>
+    <div class="voice">
+      <div class="voice-label">Travel</div>
+      <div class="voice-line">"What if your next trip wasn't just a vacation — but a story you'll keep telling?"</div>
+      <div class="voice-note">Sells the experience first; the itinerary comes second.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCROLL-STOPPING CTA ================= -->
+<section class="stopper">
+  <div class="wrap">
+    <div class="stopper-eyebrow">A small experiment</div>
+    <h2>You didn't scroll past this. That wasn't luck — it was copy doing exactly what it's built to do.</h2>
+    <p>Every headline, hook and CTA on this page was written the same way I write for clients: to earn the next line, then the next click, then the sale. If it worked on you, imagine what it can do for your product.</p>
+    <a class="btn-primary" href="#contact">Get copy that works this hard</a>
+  </div>
+</section>
+
+<!-- ================= CASE STUDIES ================= -->
+<section id="case-studies" class="wrap">
+  <div class="section-head">
+    <div class="tag">Case studies</div>
+    <h2>Applying the system, project by project</h2>
+  </div>
+
+  <!-- CASE STUDY 1: SKINCARE -->
+  <div class="case">
+    <div class="case-meta">
+      <span class="industry">Skincare &amp; Beauty</span>
+      B2C · Product education &amp; conversion
+    </div>
+    <div class="case-grid">
+      <div class="case-field">
+        <h5>Objective</h5>
+        <p>Turn technical ingredient information into content that a non-expert audience would actually read and trust.</p>
+      </div>
+      <div class="case-field">
+        <h5>Audience</h5>
+        <p>Buyers who know they have a skincare concern — acne, dullness, dehydration — but don't know which ingredients solve it.</p>
+      </div>
+      <div class="case-field">
+        <h5>Challenge</h5>
+        <p>Product descriptions were accurate but forgettable: full of ingredient names, empty of reasons to care.</p>
+      </div>
+      <div class="case-field">
+        <h5>Strategy &amp; framework</h5>
+        <p>Problem → Education → Solution → Benefit → CTA, applied across serums, face washes, sunscreens and Vitamin C products.</p>
+      </div>
+      <div class="case-field full">
+        <h5>Hook</h5>
+        <p class="hook-block">Dull skin doesn't need another filter. It needs the right routine.</p>
+      </div>
+      <div class="case-field full">
+        <h5>Copy</h5>
+        <div class="copy-sample">Sunscreen isn't the step you skip when you're in a hurry. It's the one that decides whether the rest of your routine was worth it. Lightweight, no white cast, reapplies without ruining your makeup.</div>
+      </div>
+      <div class="case-field">
+        <h5>CTA</h5>
+        <p><span class="cta-chip">Find your shade</span></p>
+      </div>
+      <div class="case-field">
+        <h5>My role</h5>
+        <p>Wrote and structured product-education copy and short-form social captions across the skincare range.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE STUDY 2: TRAVEL -->
+  <div class="case">
+    <div class="case-meta">
+      <span class="industry">Travel &amp; Tourism</span>
+      Baku · Thailand · Malaysia · Sri Lanka · Northern Pakistan
+    </div>
+    <div class="case-grid">
+      <div class="case-field">
+        <h5>Objective</h5>
+        <p>Sell destinations and tour packages without falling into generic "visit this beautiful place" copy.</p>
+      </div>
+      <div class="case-field">
+        <h5>Audience</h5>
+        <p>Travellers choosing between several similar-looking packages, deciding mostly on feeling rather than itinerary detail.</p>
+      </div>
+      <div class="case-field">
+        <h5>Challenge</h5>
+        <p>Destination content tends to sound interchangeable — the same adjectives applied to any country with a beach or a mountain.</p>
+      </div>
+      <div class="case-field">
+        <h5>Strategy &amp; framework</h5>
+        <p>Storytelling structure — hook, context, curiosity, resolution, CTA — built around a specific feeling per destination rather than a features list.</p>
+      </div>
+      <div class="case-field full">
+        <h5>Hook</h5>
+        <p class="hook-block">What if your next trip wasn't just a vacation — but a story you'll keep telling?</p>
+      </div>
+      <div class="case-field full">
+        <h5>Copy</h5>
+        <div class="copy-sample">Northern Pakistan doesn't ask you to sightsee. It asks you to slow down — for the drive, the tea stops, the villages with no signal and no rush. Not every trip needs a checklist.</div>
+      </div>
+      <div class="case-field">
+        <h5>CTA</h5>
+        <p><span class="cta-chip">See the itinerary</span></p>
+      </div>
+      <div class="case-field">
+        <h5>My role</h5>
+        <p>Wrote destination storytelling, package promotion copy and captions across five travel markets.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE STUDY 3: FURNITURE -->
+  <div class="case">
+    <div class="case-meta">
+      <span class="industry">Furniture &amp; E-commerce</span>
+      Product-to-lifestyle messaging
+    </div>
+    <div class="case-grid">
+      <div class="case-field">
+        <h5>Objective</h5>
+        <p>Move product listings away from specifications and toward the life the piece of furniture actually fits into.</p>
+      </div>
+      <div class="case-field">
+        <h5>Audience</h5>
+        <p>Online shoppers comparing near-identical listings on price and photos, with little to differentiate the copy.</p>
+      </div>
+      <div class="case-field">
+        <h5>Challenge</h5>
+        <p>Descriptions read like spec sheets — fabric type, dimensions — with nothing that made a shopper picture owning it.</p>
+      </div>
+      <div class="case-field">
+        <h5>Strategy &amp; framework</h5>
+        <p>Feature → Benefit → Lifestyle → Desire → CTA, selling comfort and daily use rather than materials alone.</p>
+      </div>
+      <div class="case-field full">
+        <h5>Hook</h5>
+        <p class="hook-block">Built for the evenings you'll spend actually living in your living room.</p>
+      </div>
+      <div class="case-field full">
+        <h5>Copy</h5>
+        <div class="copy-sample">Durable fabric matters less than what you do on it. This one's built for feet up, long calls, and the nights nobody wants to leave the couch.</div>
+      </div>
+      <div class="case-field">
+        <h5>CTA</h5>
+        <p><span class="cta-chip">Shop the collection</span></p>
+      </div>
+      <div class="case-field">
+        <h5>My role</h5>
+        <p>Wrote product-promotional and social copy translating specifications into lifestyle-led messaging.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE STUDY 4: B2C -->
+  <div class="case">
+    <div class="case-meta">
+      <span class="industry">B2C Content</span>
+      Cross-category social &amp; conversion copy
+    </div>
+    <div class="case-grid">
+      <div class="case-field">
+        <h5>Objective</h5>
+        <p>Build scroll-stopping content across multiple B2C accounts without a single, repeatable template.</p>
+      </div>
+      <div class="case-field">
+        <h5>Audience</h5>
+        <p>Feed scrollers with a two-second attention window and no obligation to keep reading.</p>
+      </div>
+      <div class="case-field">
+        <h5>Challenge</h5>
+        <p>Different products, same platform, same short window to earn attention before the thumb keeps moving.</p>
+      </div>
+      <div class="case-field">
+        <h5>Strategy &amp; framework</h5>
+        <p>Hook → Body → CTA, rebuilt per brand voice rather than reused across accounts.</p>
+      </div>
+      <div class="case-field full">
+        <h5>Hook</h5>
+        <p class="hook-block">You didn't scroll past this by accident.</p>
+      </div>
+      <div class="case-field full">
+        <h5>Copy</h5>
+        <div class="copy-sample">Most people fix the same three things in their routine and wonder why nothing changed. It's usually not the products. It's the order.</div>
+      </div>
+      <div class="case-field">
+        <h5>CTA</h5>
+        <p><span class="cta-chip">Read the full breakdown</span></p>
+      </div>
+      <div class="case-field">
+        <h5>My role</h5>
+        <p>Wrote hooks, captions and conversion copy across several concurrent B2C accounts and industries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PERFORMANCE ================= -->
+<section id="performance" class="wrap">
+  <div class="section-head">
+    <div class="tag">Performance</div>
+    <h2>What the numbers taught me</h2>
+  </div>
+  <div class="perf">
+    <div>
+      <div class="perf-num">1,000,000<em>+</em></div>
+      <p class="perf-caption">Views achieved within three months, across content created and contributed to on multiple B2C projects at ABCDMEDIA.</p>
+      <p class="disclaimer">This reflects team and platform performance across projects I contributed to, not a claim that copywriting alone produced the views.</p>
+    </div>
+    <ul class="learned">
+      <li><span class="mark">—</span> Strong hooks matter more than polished paragraphs.</li>
+      <li><span class="mark">—</span> Relevance beats generic messaging, every time.</li>
+      <li><span class="mark">—</span> Retention starts with the first line, not the offer.</li>
+      <li><span class="mark">—</span> Simple language usually outperforms clever language.</li>
+      <li><span class="mark">—</span> Content has to be built for the audience's feed, not the brand's inbox.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= BEFORE / AFTER ================= -->
+<section class="wrap">
+  <div class="section-head">
+    <div class="tag">Editing</div>
+    <h2>Before I hit publish</h2>
+  </div>
+  <div class="ba">
+    <div class="before">
+      <div class="ba-label">Generic</div>
+      <div class="ba-line">"Our skincare serum contains Vitamin C and helps improve your skin."</div>
+    </div>
+    <div class="after">
+      <div class="ba-label">Strategic</div>
+      <div class="ba-line">"Dull skin doesn't need another filter. It needs the right routine."</div>
+    </div>
+  </div>
+  <div class="why-list">
+    <span>Stronger hook</span>
+    <span>Names the audience's pain point</span>
+    <span>Reads like a person, not a label</span>
+    <span>Builds curiosity before the pitch</span>
+    <span>Still clearly about the product</span>
+  </div>
+</section>
+
+<!-- ================= CHECKLIST ================= -->
+<section class="wrap">
+  <div class="section-head">
+    <div class="tag">Standard</div>
+    <h2>Eleven questions, every time</h2>
+  </div>
+  <div class="checklist">
+    <div class="check-item"><span class="box"></span><span>Does the first line earn attention?</span></div>
+    <div class="check-item"><span class="box"></span><span>Is the audience immediately clear?</span></div>
+    <div class="check-item"><span class="box"></span><span>Is the problem or desire relevant to them?</span></div>
+    <div class="check-item"><span class="box"></span><span>Does the copy sound human?</span></div>
+    <div class="check-item"><span class="box"></span><span>Did I lead with benefits, not just features?</span></div>
+    <div class="check-item"><span class="box"></span><span>Is the structure easy to follow?</span></div>
+    <div class="check-item"><span class="box"></span><span>Does every line move the reader forward?</span></div>
+    <div class="check-item"><span class="box"></span><span>Is the CTA clear and specific?</span></div>
+    <div class="check-item"><span class="box"></span><span>Does the tone match the brand?</span></div>
+    <div class="check-item"><span class="box"></span><span>Is there any unnecessary filler?</span></div>
+    <div class="check-item"><span class="box"></span><span>Can this be shorter without losing meaning?</span></div>
+  </div>
+</section>
+
+<!-- ================= TOOLKIT ================= -->
+<section class="wrap">
+  <div class="section-head">
+    <div class="tag">Workflow</div>
+    <h2>My content toolkit</h2>
+  </div>
+  <div class="toolkit">
+    <div class="tool-card">
+      <h5>Research &amp; ideation</h5>
+      <ul>
+        <li>ChatGPT · Claude · Gemini</li>
+        <li>AnswerThePublic · Exploding Topics</li>
+        <li>Google Trends · Reddit &amp; forums</li>
+        <li>Customer interviews · competitor reviews</li>
+      </ul>
+    </div>
+    <div class="tool-card">
+      <h5>Writing &amp; copywriting</h5>
+      <ul>
+        <li>Claude · GPT-5 · Gemini</li>
+        <li>Jasper · Copy.ai · Anyword</li>
+        <li>Google Docs / Notion</li>
+        <li>Swipe files &amp; client immersion</li>
+      </ul>
+    </div>
+    <div class="tool-card">
+      <h5>Editing &amp; QA</h5>
+      <ul>
+        <li>Grammarly · QuillBot · ProWritingAid</li>
+        <li>Reading aloud · print &amp; markup</li>
+        <li>Peer review</li>
+      </ul>
+    </div>
+    <div class="tool-card">
+      <h5>Keyword &amp; SEO research</h5>
+      <ul>
+        <li>Google Keyword Planner</li>
+        <li>Google Trends</li>
+      </ul>
+    </div>
+    <div class="tool-card">
+      <h5>Visuals &amp; social</h5>
+      <ul>
+        <li>Canva (AI &amp; manual layout)</li>
+        <li>Midjourney · DALL·E</li>
+        <li>Meta Business Suite · Buffer · Later</li>
+      </ul>
+    </div>
+    <div class="tool-card">
+      <h5>Analytics &amp; project management</h5>
+      <ul>
+        <li>Google Analytics AI Insights</li>
+        <li>HubSpot AI Reporting</li>
+        <li>Notion · Trello</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="wrap contact">
+  <div class="contact-kicker">Let's work together</div>
+  <h2>Have something worth saying? Let's make people stop and read it.</h2>
+  <div class="contact-row">
+    <div class="contact-services">Content Writing · Copywriting · Social Media Content · Brand Messaging</div>
+    <div class="contact-links">
+      <a href="mailto:minnahzia8@gmail.com">
+        <span class="label">Email</span>
+        <span class="value">minnahzia8@gmail.com</span>
+      </a>
+      <a href="tel:+923351099357">
+        <span class="label">Phone</span>
+        <span class="value">+92 335 1099357</span>
+      </a>
+    </div>
+  </div>
+  <div class="contact-cta">
+    <a class="btn-primary" href="mailto:minnahzia8@gmail.com?subject=Let's%20work%20together">Turn your ideas into sales — email me</a>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>© 2026 Memoona Amir — Content Writing &amp; Copywriting</span>
+  <span>Built to convert, one line at a time.</span>
+</footer>
+
+</body>
+</html>
