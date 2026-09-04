@@ -1,4 +1,4 @@
-# Memoona Amir — Content Writing & Copywriting Portfolio
+# Memoona Amir | Content Writing & Copywriting Portfolio
 
 A single-page portfolio site. Open `index.html` in a browser to preview it.
 
